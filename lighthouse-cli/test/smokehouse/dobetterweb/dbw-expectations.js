@@ -19,18 +19,33 @@
 /**
  * Expected Lighthouse audit values for Do Better Web tests.
  */
-module.exports = [{
-  initialUrl: 'http://localhost:10200/dobetterweb/dbw_tester.html?all',
-  url: 'http://localhost:10200/dobetterweb/dbw_tester.html?all',
-  audits: {
-    'is-on-https': false,
-    'uses-http2': false,
-    'appcache-manifest': false,
-    'no-console-time': false,
-    'no-datenow': false,
-    'no-document-write': false,
-    'no-old-flexbox': false,
-    'no-websql': false
+module.exports = [
+  {
+    initialUrl: 'http://localhost:10200/dobetterweb/dbw_tester.html?all',
+    url: 'http://localhost:10200/dobetterweb/dbw_tester.html?all',
+    audits: {
+      'is-on-https': false,
+      'uses-http2': false,
+      'appcache-manifest': false,
+      'no-console-time': false,
+      'no-datenow': false,
+      'no-document-write': false,
+      'no-old-flexbox': false,
+      'no-websql': false
+    }
+  }, {
+    initialUrl: 'http://localhost:10200/online-only.html',
+    url: 'http://localhost:10200/online-only.html',
+    audits: {
+      'is-on-https': false,
+      'uses-http2': false,
+      'appcache-manifest': true,
+      'no-console-time': true,
+      'no-datenow': true,
+      'no-document-write': true,
+      'no-old-flexbox': true,
+      'no-websql': true
+    }
   }
-}];
+];
 
