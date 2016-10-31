@@ -72,8 +72,6 @@ class NoMutationEventsAudit extends Audit {
 
     const pageHost = url.parse(artifacts.URL.finalUrl).host;
 
-    // Filter out non-passive window/document/document.body listeners that do
-    // not call preventDefault() are scroll blocking events.
     const results = listeners.filter(loc => {
       const isMutationEvent = MUTATION_EVENTS.indexOf(loc.type) !== -1;
       const sameHost = url.parse(loc.url).host === pageHost;
